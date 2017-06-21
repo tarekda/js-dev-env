@@ -1,4 +1,7 @@
-before_script: chmod 0777 ./node_modules/.bin/mocha
+before_install:
+- npm install n
+- sudo ./node_modules/.bin/n stable
+- rm -rf ~/.nvm
 language: node_js
 node_js:
 - "6"
